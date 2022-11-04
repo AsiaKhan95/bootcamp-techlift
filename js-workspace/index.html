@@ -5,8 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div>
+      <h2>What javascript can do practice</h2>
+      <button onclick="greetUser()">Enter name</button>
+      <ul>
+        <li>can change content of html page</li>
+        <li>can change attribute</li>
+        <li>can hide html element</li>
+      </ul>
+
+      <div id="header" onclick="alert('hey there')"></div>
+    </div>
+
+    <!--logic playground start-->
+    <div>
+      <button onclick="printHeaderText()">show</button>
+      <button onclick="ageChecker()">Age Checker</button>
+      <button onclick="gradeChecker()">Grade Checker</button>
+      <button onclick="evenOddChecker()">Even Odd</button>
+      <button onclick="enrolledCourse()">Ckeck Enrolled Course</button>
+      <p id="result"></p>
+    </div>
+    <!--logic playground end-->
+    <!--Calculator start-->
+    <h2>Calculator</h2>
+    <div class="cal-container">
+      <div class="inp-number">
+        <div>
+          <button class="btn-cal">1</button>
+          <button class="btn-cal">2</button>
+          <button class="btn-cal">3</button>
+        </div>
+        <div>
+          <button class="btn-cal">4</button>
+          <button class="btn-cal">5</button>
+          <button class="btn-cal">6</button>
+        </div>
+        <div>
+          <button class="btn-cal">7</button>
+          <button class="btn-cal">8</button>
+          <button class="btn-cal">9</button>
+        </div>
+      </div>
+      <div class="inp-operator">
+        <button class="btn-cal">+</button>
+        <button class="btn-cal">-</button>
+        <button class="btn-cal">*</button>
+        <button class="btn-cal">/</button>
+        <button class="btn-cal">%</button>
+        <button class="btn-cal" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <!--Calculator end-->
+
+    <div>
+      <img
+        src="images/cat.jpg"
+        alt="background in black color"
+        width="200px"
+        id="slide-img"
+        onmouseover="changeSliderImage()"
+        onmouseleave="resetSliderImage()"
+      />
+    </div>
+
+    <div class="card">
+      <h4>Fact 1</h4>
+      <p>
+        Window object is the global scope object mean all variable , function
+        and method belongs to windows object It is optional to use window befor
+        that eg: window.alert() is same as alert()
+      </p>
+      <button onclick="showModal()">Read more...</button>
+    </div>
+    <div class="card">
+      <h4>Fact 2</h4>
+      <p>using browser we can not access output devices</p>
+      <p>
+        but one exception is here we can access printer by using window.print()
+        we can print current web page .
+      </p>
+      <button onclick="window.print()">Print</button>
+      <button onclick="showModal()">Read more...</button>
+    </div>
+    <div class="card">
+      <h4>Node Js</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nesciunt
+        ex, hic recusandae repudiandae soluta ea corporis dolor, blanditiis
+        consequatur culpa dicta, nisi sint quis magni consequuntur ratione error
+        deserunt?
+      </p>
+      <button onclick="showModal()">Read more...</button>
+    </div>
+    <!--Modal-->
+    <div class="modal" id="modal">
+      <button title="close" onclick="closeModel()">X</button>
+      <h4>Welcome</h4>
+      <span id="username">Asia</span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+        optio consequuntur vel dolores. Maxime, distinctio minima. Ratione
+        consectetur, quidem, reprehenderit consequuntur error aliquid
+        perspiciatis quisquam odit tempora aut ipsum blanditiis.
+      </p>
+    </div>
     <script src="js/main.js"></script>
+    <script src="conditional-statement.js"></script>
   </body>
 </html>
