@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery validation</title>
+    <!--Jquery-->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <!--Jquery validation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+  </head>
+  <style>
+    .container {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid black;
+      padding: 30px;
+      position: relative;
+      top: 40px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="">
+          <label for="username">Username</label>
+          <input type="text" id="username" />
+          <span id="username-error">error</span>
+        </div>
+        <div class="">
+          <label for="city">City</label>
+          <input type="text" id="city" />
+          <span id="city-error">error</span>
+        </div>
+        <div class="">
+          <label for="age">Age</label>
+          <input type="text" id="age" />
+          <span id="age-error">error</span>
+        </div>
+        <div class="">
+          <button type="reset">Reset</button>
+          <button type="submit" id="submit-btn">Register</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      $(document).ready(function () {
+        let email = $("#email");
+        let age = $("#age");
+
+        let usernameError = $("#username-error");
+        let emailError = $("#email-error");
+        let ageError = $("#age-error");
+
+        username.blur(function () {
+          // if (username.val()) {
+          //   const regEx = /^([a-zA-Z]{2,})$/;
+          //   regEx.test(username);
+          //   console.log(regEx.test(username));
+          //   if (typeof username.val() == "string") {
+          //     console.log("yes");
+          //     usernameError
+          //       .html("You can only enter text value ...")
+          //       .css({ color: "red" });
+          //   }
+          // } else {
+          //   usernameError.html("Enter Username").css({ color: "red" });
+          // }
+        });
+
+        city.blur(function () {
+          validateCity();
+        });
+        age.blur(function () {});
+
+        //validate username field  accept string only
+        function validateUsername() {
+          // console.log(username.val());
+          let username = $("#username").val();
+          const pattern = /[0-9]/;
+          if (username.length == 0) {
+            usernameError
+              .html("username name field is required...")
+              .css({ color: "red" });
+          } else {
+            if (pattern.test(username)) {
+              alert("hhh");
+              usernameError
+                .html("only text can enter in username field...")
+                .css({ color: "red" });
+            }
+          }
+        }
+        //validate city field  accept string only
+        function validateCity() {
+          console.log(email.val());
+        }
+        //validate age field  accept number only
+        function validateAge() {
+          console.log(age.val());
+        }
+
+        //submit form
+        $("#submit-btn").click(function (e) {
+          e.preventDefault();
+          validateUsername();
+          validateCity();
+          validateAge();
+        });
+      });
+    </script>
+  </body>
+</html>

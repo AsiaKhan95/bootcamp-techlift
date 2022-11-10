@@ -31,33 +31,12 @@
     </div>
     <!--logic playground end-->
     <!--Calculator start-->
-    <h2>Calculator</h2>
-    <div class="cal-container">
-      <div class="inp-number">
-        <div>
-          <button class="btn-cal">1</button>
-          <button class="btn-cal">2</button>
-          <button class="btn-cal">3</button>
-        </div>
-        <div>
-          <button class="btn-cal">4</button>
-          <button class="btn-cal">5</button>
-          <button class="btn-cal">6</button>
-        </div>
-        <div>
-          <button class="btn-cal">7</button>
-          <button class="btn-cal">8</button>
-          <button class="btn-cal">9</button>
-        </div>
-      </div>
-      <div class="inp-operator">
-        <button class="btn-cal">+</button>
-        <button class="btn-cal">-</button>
-        <button class="btn-cal">*</button>
-        <button class="btn-cal">/</button>
-        <button class="btn-cal">%</button>
-        <button class="btn-cal" onclick="calculate()">=</button>
-      </div>
+    <div>
+      <h2>Calculator</h2>
+      <input type="number" placeholder="Enter first number" id="operand1" />
+      <input type="number" placeholder="Enter second number" id="operand" />
+      <input type="text" placeholder="Enter operator" id="operator" />
+      <button onclick="calculate()">Caculate</button>
     </div>
     <!--Calculator end-->
 
@@ -115,5 +94,6 @@
     </div>
     <script src="js/main.js"></script>
     <script src="conditional-statement.js"></script>
+    <script src="day2-practice-task-slide62.js"></script>
   </body>
 </html>

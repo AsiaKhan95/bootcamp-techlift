@@ -1,0 +1,14 @@
+{
+  "name": "first-4-nov",
+  "version": "1.0.0",
+  "description": "Topic To Learn: You can use YouTube or Google to Find out the topics.  What is Function in JavaScript? with examples.  What is Map in JavaScript? use different function in map like set, get, has, delete, size.  What is For In loop in JavaScript? with examples.  Classes and Objects in JavaScript? with examples.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Asia Khan",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

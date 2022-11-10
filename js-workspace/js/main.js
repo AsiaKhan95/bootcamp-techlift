@@ -1,3 +1,9 @@
+let num1 = 13; // numeric type
+let num2 = "11"; //string type
+let title; //declare but not set it value it contains undefine
+console.log(title + num2);
+console.log(title);
+
 //greetUser
 function greetUser() {
   let username = prompt();
